@@ -8,8 +8,8 @@ def bisseccao(xa, xb, precisao):
     if f(xa)*f(xb) < 0:
         while (abs(f(xm)) > precisao):
             xm = (xa + xb) / 2
-            if f(xm) == 0:
-                print(f'Raiz = {xm:.2f}')
+            if abs(f(xm)) < precisao:
+                continue
             else:
                 if f(xa)*f(xm) < 0:
                     xb = xm
